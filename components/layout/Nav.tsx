@@ -10,7 +10,7 @@ const Nav = function EnhancedNav() {
   ];
 
   return (
-    <nav className="flex gap-6 flex-wrap items-center justify-center mt-3">
+    <nav className="flex gap-6 flex-wrap items-center justify-center">
       {links.map((link) => {
         const isActive = pathname === link.href;
 
@@ -20,8 +20,8 @@ const Nav = function EnhancedNav() {
             href={link.href}
             className={`
                 relative flex items-center gap-2 py-2 px-1
-                text-primary transition-colors duration-200 nav
-                ${isActive ? "text-primary-foreground text-red-500" : ""}
+                transition-colors duration-200 nav
+                ${isActive ? "text-red-500" : "text-gray-800"}
                 hover:scale-105 transition ease-in-out duration-400
               `}
             rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Nav = function EnhancedNav() {
             <span
               className={`
                   absolute bottom-0 left-0 w-full h-0.5
-                  bg-primary transform transition-transform
+                  bg-gray-800 transform transition-transform
                   ${isActive ? "scale-x-100" : "scale-x-0"}
                   hover:bg-secondary hover:text-secondary-foreground
                   transition ease-in-out duration-500

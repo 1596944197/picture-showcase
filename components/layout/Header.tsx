@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const Header: NextPage = () => {
   return (
-    <Navbar>
+    <Navbar className="bg-white dark:bg-black">
       <NavbarBrand>
         <Logo />
       </NavbarBrand>

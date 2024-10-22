@@ -21,8 +21,9 @@ const Nav = function EnhancedNav() {
             className={`
                 relative flex items-center gap-2 py-2 px-1
                 transition-colors duration-200 nav
-                ${isActive ? "text-red-500" : "text-gray-800"}
+                ${isActive ? "text-red-500" : "text-gray-800 dark:text-white"}
                 hover:scale-105 transition ease-in-out duration-400
+                text-lg
               `}
             rel="noopener noreferrer"
           >

@@ -1,8 +1,7 @@
 "use client";
 import { useScrollHeight } from "@/hooks/useScrollHeight";
-import Masonry from "masonry-layout";
 import { usePathname } from "next/navigation";
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo, useEffect } from "react";
 import { default as LazyImage } from "./Picture";
 
 type PictureProps = React.ComponentProps<typeof LazyImage>;
@@ -12,18 +11,7 @@ type Props = {
 
 const Gallery = ({ images }: Props) => {
   const pathname = usePathname();
-  const masonryRef = useRef<HTMLDivElement>(null);
   const { scrollHeight } = useScrollHeight("/");
-
-  useEffect(() => {
-    const masonryContainer = masonryRef.current;
-    if (masonryContainer) {
-      new Masonry(masonryContainer, {
-        itemSelector: ".masonry-item",
-        percentPosition: true,
-      });
-    }
-  }, [images]);
 
   useEffect(() => {
     if (pathname !== "/") return;
@@ -34,18 +22,28 @@ const Gallery = ({ images }: Props) => {
 
   return (
     <section
-      ref={masonryRef}
-      className="flex masonry-container"
+      className={`${pathname === "/" ? "grid" : "hidden"}`}
       style={{
-        display: pathname == "/" ? "flex" : "none",
+        display: pathname === "/" ? "grid" : "none",
       }}
     >
-      {images &&
-        images.map((image, index) => (
-          <div key={index} className="masonry-item mr-1 mb-1">
-            <LazyImage {...image} />
-          </div>
-        ))}
+      <div
+        className={`
+          columns-2
+          sm:columns-2
+          md:columns-3
+          lg:columns-4
+          transition-all duration-500 ease-in-out
+          px-3
+        `}
+      >
+        {images &&
+          images.map((image, index) => (
+            <div key={index} className="mb-4 flex justify-center items-center">
+              <LazyImage {...image} />
+            </div>
+          ))}
+      </div>
     </section>
   );
 };

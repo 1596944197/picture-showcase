@@ -12,8 +12,10 @@ const LazyImage = ({ src, alt, onClick }: Props) => {
       src={src}
       alt={alt}
       onClick={onClick}
-      className="w-full block h-auto"
-      isZoomed={false}
+      className="
+      block w-full sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-auto
+      "
+      isZoomed={true}
       radius="none"
     />
   );

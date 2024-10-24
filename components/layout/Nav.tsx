@@ -36,6 +36,7 @@ const Nav = function EnhancedNav() {
                   hover:bg-secondary hover:text-secondary-foreground
                   transition ease-in-out duration-500
                   bg-gray-800 origin-center
+                  dark:bg-white
                 `}
             />
           </Link>

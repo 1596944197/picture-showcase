@@ -8,7 +8,13 @@ type Props = {
 
 const LazyImage = ({ src, alt, onClick }: Props) => {
   return (
-    <div className="w-full sm:w-[45vw] md:w-[30vw] lg:w-[20vw] p-2 bg-white shadow-xl rounded border border-gray-200 overflow-hidden">
+    <div
+      className="
+       w-full sm:w-[45vw] md:w-[30vw] lg:w-[20vw] p-2
+     bg-white shadow-xl rounded border border-gray-200 overflow-hidden
+     dark:bg-zinc-600 dark:border-zinc-500
+     "
+    >
       <Image
         src={src}
         alt={alt}

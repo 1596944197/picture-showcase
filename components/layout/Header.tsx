@@ -2,6 +2,7 @@ import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
 import { NextPage } from "next";
 import Logo from "./Logo";
 import Nav from "./Nav";
+import RightMenu from "./RightMenu";
 
 const Header: NextPage = () => {
   return (
@@ -12,7 +13,9 @@ const Header: NextPage = () => {
       <NavbarContent justify="center">
         <Nav />
       </NavbarContent>
-      <NavbarContent justify="end"></NavbarContent>
+      <NavbarContent justify="end">
+        <RightMenu />
+      </NavbarContent>
     </Navbar>
   );
 };

@@ -1,6 +1,5 @@
 "use client";
 import { useScrollHeight } from "@/hooks/useScrollHeight";
-import imagesLoaded from "imagesloaded";
 import Masonry from "masonry-layout";
 import { usePathname } from "next/navigation";
 import React, { memo, useEffect, useRef } from "react";
@@ -19,11 +18,9 @@ const Gallery = ({ images }: Props) => {
   useEffect(() => {
     const masonryContainer = masonryRef.current;
     if (masonryContainer) {
-      imagesLoaded(masonryContainer, () => {
-        new Masonry(masonryContainer, {
-          itemSelector: ".masonry-item",
-          percentPosition: true,
-        });
+      new Masonry(masonryContainer, {
+        itemSelector: ".masonry-item",
+        percentPosition: true,
       });
     }
   }, [images]);

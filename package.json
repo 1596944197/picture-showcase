@@ -10,15 +10,17 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.8",
-    "flickr-justified-gallery": "^2.2.0",
     "framer-motion": "^11.11.9",
-    "lightgallery": "^2.7.2",
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/imagesloaded": "^4.1.6",
+    "@types/masonry-layout": "^4.2.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

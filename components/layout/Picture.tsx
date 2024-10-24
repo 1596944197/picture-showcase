@@ -8,16 +8,19 @@ type Props = {
 
 const LazyImage = ({ src, alt, onClick }: Props) => {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      onClick={onClick}
-      className="
-      block w-full sm:w-[45vw] md:w-[30vw] lg:w-[20vw] h-auto
-      "
-      isZoomed={true}
-      radius="none"
-    />
+    <div className="w-full sm:w-[45vw] md:w-[30vw] lg:w-[20vw] p-2 bg-white shadow-xl rounded border border-gray-200 overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        onClick={onClick}
+        className="
+        block w-full h-auto
+        sm:w-[44vw] md:w-[29vw] lg:w-[19vw]
+        "
+        isZoomed={true}
+        radius="none"
+      />
+    </div>
   );
 };
 

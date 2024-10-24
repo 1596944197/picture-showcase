@@ -22,9 +22,9 @@ const Gallery = ({ images }: Props) => {
 
   return (
     <section
-      className={`${pathname === "/" ? "grid" : "hidden"}`}
+      className={`${pathname === "/" ? "block" : "hidden"}`}
       style={{
-        display: pathname === "/" ? "grid" : "none",
+        display: pathname === "/" ? "block" : "none",
       }}
     >
       <div
@@ -33,8 +33,6 @@ const Gallery = ({ images }: Props) => {
           sm:columns-2
           md:columns-3
           lg:columns-4
-          transition-all duration-500 ease-in-out
-          px-3
         `}
       >
         {images &&

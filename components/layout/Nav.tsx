@@ -10,7 +10,7 @@ const Nav = function EnhancedNav() {
   ];
 
   return (
-    <nav className="flex gap-6 flex-wrap items-center justify-center">
+    <nav className="flex gap-6 flex-wrap items-center justify-center ml-8">
       {links.map((link) => {
         const isActive = pathname === link.href;
 

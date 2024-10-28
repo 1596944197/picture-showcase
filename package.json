@@ -12,6 +12,7 @@
     "@nextui-org/react": "^2.4.8",
     "framer-motion": "^11.11.9",
     "imagesloaded": "^5.0.0",
+    "lucide-react": "^0.453.0",
     "masonry-layout": "^4.2.2",
     "next": "14.2.15",
     "next-nprogress-bar": "^2.3.14",

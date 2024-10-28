@@ -137,6 +137,38 @@ const images = [
     src: "https://pic.netbian.com/uploads/allimg/240521/233805-17163058853baa.jpg",
     alt: "ces",
   },
+  {
+    src: "http://img.netbian.com/file/2024/1028/001138WhmhO.jpg",
+    alt: "cesec",
+  },
+  {
+    src: "http://img.netbian.com/file/2024/0125/010813rQ3kM.jpg",
+    alt: "242424",
+  },
+  {
+    src: "http://img.netbian.com/file/2024/0325/small234506wB8aC1711381507.jpg",
+    alt: "sdsdc",
+  },
+  {
+    src: "https://pic.netbian.com/uploads/allimg/241024/151641-1729754201dcbd.jpg",
+    alt: "sfsfsf",
+  },
+  {
+    src: "https://pic.netbian.com/uploads/allimg/241015/164237-172898175794fe.jpg",
+    alt: "sfssf",
+  },
+  {
+    src: "https://pic.netbian.com/uploads/allimg/241014/171541-17288973418ae7.jpg",
+    alt: "ssafasf",
+  },
+  {
+    src: "https://pic.netbian.com/uploads/allimg/241007/213315-17283079955509.jpg",
+    alt: "sfsfsf",
+  },
+  {
+    src: "https://pic.netbian.com/uploads/allimg/241007/212948-17283077882ea8.jpg",
+    alt: "24242424",
+  },
 ];
 
 export default function RootLayout({

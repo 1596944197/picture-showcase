@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from "next-nprogress-bar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Nav = function EnhancedNav() {
   const pathname = usePathname(); // Use Next.js navigation hook to get the current path
+  const router = useRouter();
   const links = [
     { href: "/", label: "Learn" },
     { href: "/timeline", label: "Examples" },
@@ -26,6 +28,7 @@ const Nav = function EnhancedNav() {
                 text-lg
               `}
             rel="noopener noreferrer"
+            onClick={() => router.push(link.href)}
           >
             {link.label}
             <span

@@ -1,8 +1,8 @@
 import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
 import { NextPage } from "next";
+import RightMenu from "./DarkLight";
 import Logo from "./Logo";
 import Nav from "./Nav";
-import RightMenu from "./RightMenu";
 
 const Header: NextPage = () => {
   return (

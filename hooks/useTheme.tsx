@@ -31,9 +31,20 @@ const useTheme = () => {
     } else {
       setLightTheme();
     }
-  }, [isDark]);
+  }, []);
 
-  return { isDark, setIsDark };
+  const set = (isDark: boolean) => {
+    if (isDark) {
+      setDarkTheme();
+    } else {
+      setLightTheme();
+    }
+  };
+
+  return {
+    isDark: isDark === "dark",
+    setIsDark: set,
+  };
 };
 
 export { useTheme };

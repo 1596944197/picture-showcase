@@ -1,10 +1,9 @@
 import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
-import { NextPage } from "next";
-import RightMenu from "./DarkLight";
-import Logo from "./Logo";
-import Nav from "./Nav";
+import { DarkLight } from "./DarkLight";
+import { Logo } from "./Logo";
+import { Nav } from "./Nav";
 
-const Header: NextPage = () => {
+const Header = () => {
   return (
     <Navbar className="bg-white dark:bg-black">
       <NavbarBrand>
@@ -14,7 +13,7 @@ const Header: NextPage = () => {
         <Nav />
       </NavbarContent>
       <NavbarContent justify="end">
-        <RightMenu />
+        <DarkLight />
       </NavbarContent>
     </Navbar>
   );

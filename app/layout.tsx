@@ -1,8 +1,8 @@
 import { ControlDropButton } from "@/components/layout/ControlDropButton";
-import Gallery from "@/components/layout/Gallery";
 import Header from "@/components/layout/Header";
 import Main from "@/components/layout/Main";
 import { ProgressBarProviders } from "@/components/layout/ProcessBar";
+import Gallery from "@/components/ui/Gallery";
 import { NextUIProvider } from "@nextui-org/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";

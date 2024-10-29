@@ -11,6 +11,27 @@ const Nav = function EnhancedNav() {
     { href: "/timeline", label: "Examples" },
   ];
 
+  const handleClick = (href: string) => {
+    router.push(href);
+  };
+
+  return (
+    <NavUi
+      {...{
+        pathname,
+        links,
+        handleClick,
+      }}
+    />
+  );
+};
+
+type Props = {
+  pathname: string;
+  links: { href: string; label: string }[];
+  handleClick: (href: string) => void;
+};
+const NavUi = ({ pathname, links, handleClick }: Props) => {
   return (
     <nav className="flex gap-6 flex-wrap items-center justify-center ml-8">
       {links.map((link) => {
@@ -28,7 +49,7 @@ const Nav = function EnhancedNav() {
                 text-lg
               `}
             rel="noopener noreferrer"
-            onClick={() => router.push(link.href)}
+            onClick={() => handleClick(link.href)}
           >
             {link.label}
             <span
@@ -49,4 +70,4 @@ const Nav = function EnhancedNav() {
   );
 };
 
-export default Nav;
+export { Nav };

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Skeleton } from "@nextui-org/react";
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 type Props = {
   src: string;
   alt: string;
@@ -44,22 +44,8 @@ const LazyImage = ({ src, alt, onClick }: Props) => {
         "
         />
       </Skeleton>
-      {/* <Image
-        alt={alt}
-        src={src}
-        height={300}
-        onClick={onClick}
-        onLoad={handleLoad}
-        loading="lazy"
-        className="
-            block w-full h-auto
-            sm:w-[44vw] md:w-[29vw] lg:w-[19vw]
-        "
-        isZoomed={true}
-        radius="none"
-      ></Image> */}
     </div>
   );
 };
 
-export default memo(LazyImage);
+export { LazyImage };

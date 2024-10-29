@@ -9,7 +9,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { default as LazyImage } from "./Picture";
+import { LazyImage } from "./Picture";
 
 type PictureProps = React.ComponentProps<typeof LazyImage>;
 type Props = {

@@ -2,21 +2,29 @@
 import { useTheme } from "@/hooks/useTheme";
 import { Button } from "@nextui-org/react";
 
-export default function RightMenu() {
+export function DarkLight() {
   const { isDark, setIsDark } = useTheme();
 
   const handleChange = () => {
     setIsDark(!isDark);
   };
 
+  return <DarkLightUi {...{ isDark, handleChange }} />;
+}
+
+type Props = {
+  isDark: boolean;
+  handleChange: () => void;
+};
+const DarkLightUi = (props: Props) => {
   return (
     <Button
-      onClick={handleChange}
+      onClick={props.handleChange}
       variant="bordered"
       className="capitalize min-w-10"
       radius="full"
     >
-      {isDark ? "🌙" : "☀️"}
+      {props.isDark ? "🌙" : "☀️"}
     </Button>
   );
-}
+};

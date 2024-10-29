@@ -1,10 +1,9 @@
 "use client";
 import { Image, Skeleton } from "@nextui-org/react";
-import { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
 
-const Logo: NextPage = () => {
+const Logo = () => {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <Link href="/" className="select-none">
@@ -21,4 +20,4 @@ const Logo: NextPage = () => {
   );
 };
 
-export default Logo;
+export { Logo };

@@ -1,3 +1,4 @@
+import { ControlDropButton } from "@/components/layout/ControlDropButton";
 import Gallery from "@/components/layout/Gallery";
 import Header from "@/components/layout/Header";
 import Main from "@/components/layout/Main";
@@ -185,6 +186,7 @@ export default function RootLayout({
               <Gallery images={images} />
               {children}
             </Main>
+            <ControlDropButton />
           </ProgressBarProviders>
         </NextUIProvider>
       </body>

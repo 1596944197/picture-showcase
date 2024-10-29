@@ -1,5 +1,5 @@
 "use client";
-import { useScrollHeight } from "@/components/provider/ScrollProvider";
+import { useScrollHeight } from "@/hooks/useScrollHeight";
 import { ArrowUpToLine } from "lucide-react";
 
 const ToTop = () => {

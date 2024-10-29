@@ -1,5 +1,5 @@
 "use client";
-import { useScrollHeight } from "@/components/provider/ScrollProvider";
+import { useScrollHeight } from "@/hooks/useScrollHeight";
 import { usePathname } from "next/navigation";
 import React, {
   lazy,
@@ -23,8 +23,6 @@ const Gallery = ({ images }: Props) => {
   const { scrollHeight } = useScrollHeight("/");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [img, setCurrentImg] = useState("");
-
-  console.log(scrollHeight);
 
   useEffect(() => {
     if (pathname !== "/") return;

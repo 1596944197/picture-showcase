@@ -1,3 +1,9 @@
+import { ToTop } from "@/components/ui/ToTop";
+
 export default function Home() {
-  return <></>;
+  return (
+    <section>
+      <ToTop />
+    </section>
+  );
 }

@@ -38,7 +38,7 @@ export const ScrollProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useScrollHeight = (pathname: string) => {
+export const useProviderScrollHeight = (pathname: string) => {
   const { pathnameMap } = useContext(ScrollContext);
 
   return {

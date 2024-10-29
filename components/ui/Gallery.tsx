@@ -1,5 +1,5 @@
 "use client";
-import { useScrollHeight } from "@/hooks/useScrollHeight";
+import { useScrollHeight } from "@/components/provider/ScrollProvider";
 import { usePathname } from "next/navigation";
 import React, {
   lazy,
@@ -24,6 +24,8 @@ const Gallery = ({ images }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [img, setCurrentImg] = useState("");
 
+  console.log(scrollHeight);
+
   useEffect(() => {
     if (pathname !== "/") return;
     requestAnimationFrame(() => {
@@ -42,7 +44,6 @@ const Gallery = ({ images }: Props) => {
 
   return (
     <section
-      className={`${pathname === "/" ? "block" : "hidden"}`}
       style={{
         display: pathname === "/" ? "block" : "none",
       }}

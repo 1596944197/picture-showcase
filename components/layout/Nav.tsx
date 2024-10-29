@@ -7,7 +7,7 @@ const Nav = function EnhancedNav() {
   const pathname = usePathname(); // Use Next.js navigation hook to get the current path
   const router = useRouter();
   const links = [
-    { href: "/", label: "Learn" },
+    { href: "/", label: "首页" },
     { href: "/timeline", label: "Examples" },
   ];
 

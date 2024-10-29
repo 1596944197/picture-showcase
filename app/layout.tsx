@@ -1,7 +1,7 @@
-import { ControlDropButton } from "@/components/layout/ControlDropButton";
 import Header from "@/components/layout/Header";
 import Main from "@/components/layout/Main";
 import { ProgressBarProviders } from "@/components/layout/ProcessBar";
+import { ScrollProvider } from "@/components/provider/ScrollProvider";
 import Gallery from "@/components/ui/Gallery";
 import { NextUIProvider } from "@nextui-org/react";
 import type { Metadata } from "next";
@@ -183,10 +183,11 @@ export default function RootLayout({
           <ProgressBarProviders>
             <Header />
             <Main>
-              <Gallery images={images} />
+              <ScrollProvider>
+                <Gallery images={images} />
+              </ScrollProvider>
               {children}
             </Main>
-            <ControlDropButton />
           </ProgressBarProviders>
         </NextUIProvider>
       </body>

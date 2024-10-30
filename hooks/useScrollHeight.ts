@@ -10,11 +10,10 @@ const createScrollManager = () => {
 
   const notifyListeners = (currentPath: string) => {
     const currentScrollHeight = pathnameMap.get(currentPath) || 0;
-    console.log(currentPath, currentScrollHeight, listeners);
     listeners.forEach((listener) => listener(currentPath, currentScrollHeight));
   };
 
-  const handleScroll = debounce({ delay: 200 }, () => {
+  const handleScroll = debounce({ delay: 100 }, () => {
     const currentPath = window.location.pathname;
     const currentScrollY = window.scrollY;
     pathnameMap.set(currentPath, currentScrollY);

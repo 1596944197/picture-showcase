@@ -30,8 +30,11 @@ const ToTop = () => {
   return (
     <div
       onClick={handleClick}
-      className="fixed bottom-5 right-5 w-12 h-12 cursor-pointer transition-transform duration-300 hover:scale-110"
-      style={{ display: scrollHeight > 400 ? "block" : "none" }}
+      className={`fixed bottom-4  w-12 h-12 cursor-pointer transition-opacity duration-300 transform ${
+        scrollHeight > 400
+          ? "opacity-100 scale-100 right-4"
+          : "opacity-0 scale-95 -right-28"
+      }`}
     >
       <div className="relative w-full h-full flex items-center justify-center rounded-full bg-white dark:bg-black shadow-lg border border-gray-300 dark:border-gray-600">
         <div

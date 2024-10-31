@@ -65,17 +65,17 @@ export function PhotoViewer(props: LazyImageProps) {
   ];
 
   return (
-    <div className="flex h-[94vh]  my-[1vh] w-[96vw] gap-3">
-      {/* Left side - Image display */}
-      <Image
-        src={currentPhoto.url}
-        alt="Current photo"
-        className="w-full h-full block flex-1.5 max-w-5xl object-contain"
-        radius="none"
-      />
+    <div className="flex h-[94vh] my-[1vh] w-[96vw] gap-3">
+      <section className="w-2/3 max-w-5xl flex justify-center">
+        <Image
+          src={currentPhoto.url}
+          alt="Current photo"
+          className="w-full h-full block object-contain"
+          radius="none"
+        />
+      </section>
 
-      {/* Right side - Controls and info */}
-      <section className="flex-1 p-4 flex flex-col">
+      <section className="w-1/3 p-4 flex flex-col">
         <div className="flex justify-between mb-4 gap-3">
           <Button
             size="sm"

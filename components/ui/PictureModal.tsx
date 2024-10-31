@@ -11,13 +11,18 @@ type Props = {
 
 const PictureModal = (props: Props) => {
   return (
-    <Modal size="full" isOpen={props.isOpen} onClose={props.onClose}>
+    <Modal
+      size="full"
+      isOpen={props.isOpen}
+      onClose={props.onClose}
+      classNames={{
+        closeButton: "right-3 top-3",
+      }}
+    >
       <ModalContent>
-        {() => (
-          <ModalBody>
-            <PhotoViewer {...props.image} />
-          </ModalBody>
-        )}
+        <ModalBody>
+          <PhotoViewer {...props.image} />
+        </ModalBody>
       </ModalContent>
     </Modal>
   );

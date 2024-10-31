@@ -65,7 +65,7 @@ export function PhotoViewer(props: LazyImageProps) {
   ];
 
   return (
-    <div className="flex h-[94vh] my-[1vh] w-[96vw] gap-3">
+    <div className="flex h-[94vh] my-[1vh] w-[96vw] gap-3 mt-3">
       <section className="w-2/3 max-w-5xl flex justify-center">
         <Image
           src={currentPhoto.url}

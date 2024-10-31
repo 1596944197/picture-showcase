@@ -1,4 +1,3 @@
-"use client";
 import { debounce } from "radash";
 import { useEffect, useState } from "react";
 

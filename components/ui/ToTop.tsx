@@ -23,6 +23,8 @@ const ToTop = () => {
       setScrollPercent(currentScroll);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

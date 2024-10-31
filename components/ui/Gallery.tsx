@@ -22,7 +22,7 @@ const Gallery = ({ images }: Props) => {
   const pathname = usePathname();
   const { scrollHeight } = useScrollHeight("/");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [img, setCurrentImg] = useState("");
+  const [imgIndex, setCurrentImgIndex] = useState(0);
 
   useEffect(() => {
     if (pathname !== "/") return;
@@ -31,9 +31,9 @@ const Gallery = ({ images }: Props) => {
     });
   }, [pathname]);
 
-  const handleClick = (image: Props["images"][0]) => {
+  const handleClick = (index: number) => {
     setIsModalOpen(true);
-    setCurrentImg(image.src);
+    setCurrentImgIndex(index);
   };
 
   const handleModalClose = useCallback(() => {
@@ -59,7 +59,7 @@ const Gallery = ({ images }: Props) => {
             <div
               key={index}
               className="mb-4 flex justify-center items-center"
-              onClick={() => handleClick(image)}
+              onClick={() => handleClick(index)}
             >
               <LazyImage {...image} />
             </div>
@@ -70,7 +70,7 @@ const Gallery = ({ images }: Props) => {
           <PictureModal
             isOpen={isModalOpen}
             onClose={handleModalClose}
-            image={img}
+            image={images[imgIndex]}
           />
         )}
       </Suspense>

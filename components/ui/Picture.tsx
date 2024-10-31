@@ -1,13 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { LazyImageProps } from "@/types";
 import { Skeleton } from "@nextui-org/react";
 import { useCallback, useEffect, useRef, useState } from "react";
-type Props = {
-  src: string;
-  alt: string;
-  onClick?: () => void;
-};
 
-const LazyImage = ({ src, alt, onClick }: Props) => {
+const LazyImage = ({ src, alt, onClick }: LazyImageProps) => {
   const imgRef = useRef<HTMLImageElement>(null);
   const [isLoading, setIsLoading] = useState(true);
 

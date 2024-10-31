@@ -1,3 +1,4 @@
+import { LazyImageProps } from "@/types";
 import { Modal, ModalBody, ModalContent } from "@nextui-org/react";
 import { memo } from "react";
 import { PhotoViewer } from "./PhotoViewer";
@@ -5,7 +6,7 @@ import { PhotoViewer } from "./PhotoViewer";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  image: string;
+  image: LazyImageProps;
 };
 
 const PictureModal = (props: Props) => {
@@ -14,7 +15,7 @@ const PictureModal = (props: Props) => {
       <ModalContent>
         {() => (
           <ModalBody>
-            <PhotoViewer />
+            <PhotoViewer {...props.image} />
           </ModalBody>
         )}
       </ModalContent>

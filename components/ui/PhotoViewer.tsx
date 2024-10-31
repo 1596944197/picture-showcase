@@ -1,5 +1,6 @@
 "use client";
 
+import { LazyImageProps } from "@/types";
 import { Button, Card, CardBody, Image, Tab, Tabs } from "@nextui-org/react";
 import {
   Camera,
@@ -13,11 +14,11 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-export function PhotoViewer() {
+export function PhotoViewer(props: LazyImageProps) {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const photos = [
     {
-      url: "https://pic.netbian.com/uploads/allimg/240521/233805-17163058853baa.jpg",
+      url: props.src,
       cameraModel: "XIAOMI 23127PN0CC",
       aperture: "F/2",
       shutterSpeed: "1/193",
@@ -69,7 +70,7 @@ export function PhotoViewer() {
       <Image
         src={currentPhoto.url}
         alt="Current photo"
-        className="w-full h-full block flex-1.5"
+        className="w-full h-full block flex-1.5 max-w-5xl object-contain"
         radius="none"
       />
 
